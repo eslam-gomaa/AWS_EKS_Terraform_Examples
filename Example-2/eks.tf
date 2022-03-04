@@ -64,6 +64,8 @@ resource "aws_eks_cluster" "eks_cluster" {
   name     = var.eks_cluster_name
   role_arn =  "${aws_iam_role.iam-role-eks-cluster.arn}"
   version  = var.eks_cluster_version
+  endpoint_private_access = true # Enable EKS private API server endpoint
+  endpoint_public_access  = true # Default is True
 
 # Adding VPC Configuration
 
@@ -126,8 +128,6 @@ resource "aws_eks_node_group" "node" {
   node_group_name = "node_group1"
   node_role_arn   = aws_iam_role.eks_nodes.arn
   subnet_ids      = aws_subnet.private.*.id
-  endpoint_private_access = true # Enable EKS private API server endpoint
-  endpoint_public_access  = true # Default is True
 
   scaling_config {
     desired_size = 4
