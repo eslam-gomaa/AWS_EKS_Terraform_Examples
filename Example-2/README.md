@@ -2,7 +2,7 @@
 # Following AWS Best Practices for deploying EKS
 
 
-#####Create the key pair 
+##### Create the key pair 
 ```bash
 aws ec2 create-key-pair --key-name key1  --egion us-east-1 --query 'KeyMaterial' --output text > key1.pem
 ```
