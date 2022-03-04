@@ -12,7 +12,7 @@
 
 ##### Test
 ```
-kubectl get svc
+kubectl get nodes
 ```
 
 
