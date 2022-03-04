@@ -28,7 +28,7 @@ resource "aws_subnet" "eks_interfaces" {
   }
 }
 
-# Subnets when the Nodes will be launched
+# Subnets where the Nodes will be launched
 resource "aws_subnet" "private" {
   count                   = length(var.private_subnets)
   vpc_id                  = aws_vpc.main.id
@@ -40,7 +40,7 @@ resource "aws_subnet" "private" {
   }
 }
 
-# Subnets when the External Load balancers will be launched
+# Subnets where the External Load balancers will be launched
 resource "aws_subnet" "public" {
   count                   = length(var.public_subnets)
   vpc_id                  = aws_vpc.main.id
