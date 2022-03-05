@@ -1,0 +1,23 @@
+controller:
+  podAnnotations:
+    prometheus.io/scrape: "true"
+    prometheus.io/path: /metrics
+    prometheus.io/port: "1024"
+  ingressClass: haproxy
+  kind: Deployment # DaemonSet
+  service:
+    type: LoadBalancer    # can be 'NodePort' or 'LoadBalancer'
+    annotations:
+      service.beta.kubernetes.io/aws-load-balancer-type: external
+      service.beta.kubernetes.io/aws-load-balancer-nlb-target-type: instance
+      service.beta.kubernetes.io/aws-load-balancer-scheme: internet-facing
+      service.beta.kubernetes.io/aws-load-balancer-name: Public-to-HAProxy-Ingress-Controller  # Set the Load balancer Name
+      service.beta.kubernetes.io/aws-load-balancer-additional-resource-tags: name=test-name
+    nodePorts:
+      http:  30000
+      https: 30001
+      stat:  30002
+  serviceMonitor:
+    enabled: true
+  logging:
+    level: info
