@@ -1,7 +1,7 @@
 
 # Deploy the HAProxy Ingress Controller with Helm
 
-The Helm configuration are in [haproxy-values.yaml](haproxy-values.yaml),  Take a look at them
+The Helm configuration are in [haproxy-values-v1.yaml](haproxy-values-v1.yaml),  Take a look at them
 
 *Description, TBD*
 
@@ -13,7 +13,7 @@ helm upgrade --install haproxy-ingress \
   -n haproxy-controller \
   --create-namespace \
   --set controller.ingressClass=haproxy \
-  --values haproxy-values.yaml
+  --values haproxy-values-v1.yaml
 ```
 
 ```bash
