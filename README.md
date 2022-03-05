@@ -27,6 +27,6 @@ export AWS_REGION='us-east-1'
 | Use Cases                                                    | Comments                                                     |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Install HAProxy Ingress Controller](Use-Cases/HAProxy-Ingress-Controller/) v1 | Using the default Load Balancer Controller  "`AWS cloud provider load balancer controller`" |
-| [A Sample Application -- Siyuan Note](Use-Cases/sample-app-Siyuan/) | Deploy the sample app to th Kubernetes cluster & use the HAProxy Ingress controller to access the app |
+| [A Sample Application -- Siyuan Note](Use-Cases/sample-app-siyuan/) | Deploy the sample app to th Kubernetes cluster & use the HAProxy Ingress controller to access the app |
 |                                                              |                                                              |
 
