@@ -4,7 +4,13 @@ Different strategies to deploy EKS on AWS with Terraform
 
 <br>
 
+```bash
+export AWS_ACCESS_KEY_ID=''
+export AWS_SECRET_ACCESS_KEY=''
+export AWS_REGION='us-east-1'
+```
 
+<br>
 
 
 | col2                                               | col3                                                         |
