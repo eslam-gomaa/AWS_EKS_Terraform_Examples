@@ -14,13 +14,19 @@ export AWS_REGION='us-east-1'
 
 
 
-| 🌱                                               | Description                                                         |
+
+
+| Deploy EKS with Terraform                          | Comments                                                     |
 | -------------------------------------------------- | ------------------------------------------------------------ |
 | [Cluster with only Public subnets](Example-1)      | Cluster Nodes & Load balancers will be deployed in the public subnets |
-| [Cluster with Private & Public subnets](Example-2) | - Nodes will be deployed in the private subnets - Load balancers will be deployed in the public subnets |
-| [Test Case](Test-Case)                             | HAProxy Ingress controller (To be organized.)                |
-| AWS Cloud Provider Load Balancer Controller        | TBD                                                          |
-| AWS Load Balancer Controller                       | TBD                                                          |
+| [Cluster with Private & Public subnets](Example-2) | - Nodes will be deployed in the private subnets <br />- Load balancers will be deployed in the public subnets<br />- the EKS elastic interfaces will be deployed in dedicated private subnets |
+|                                                    |                                                              |
 
 
+
+| Use Cases                                                    | Comments                                                     |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| [Install HAProxy Ingress Controller](Use-Cases/HAProxy-Ingress-Controller/) v1 | Using the default Load Balancer Controller  "`AWS cloud provider load balancer controller`" |
+| [A Sample Application -- Siyuan Note](Use-Cases/sample-app-Siyuan/) | Deploy the sample app to th Kubernetes cluster & use the HAProxy Ingress controller to access the app |
+|                                                              |                                                              |
 
