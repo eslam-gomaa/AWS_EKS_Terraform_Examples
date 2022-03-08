@@ -22,6 +22,6 @@ This repo will be organized & populated Over time.
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | [Install HAProxy Ingress Controller](Use-Cases/HAProxy-Ingress-Controller/) | Using the default Load Balancer Controller  "`AWS cloud provider load balancer controller`" |
 | [A Sample Application -- Siyuan Note](Use-Cases/sample-app-siyuan/) | Deploy a sample app to the Kubernetes cluster & use the `HAProxy Ingress controller` to access the app Externally. |
-| Install Use the `AWS Load Balancer Controller `              |                                                              |
+| Install & Use the `AWS Load Balancer Controller `              |                                                              |
 |                                                              |                                                              |
 
