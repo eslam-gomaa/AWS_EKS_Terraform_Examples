@@ -8,7 +8,23 @@ This repo will be organized & populated Over time.
 
 <br>
 
+### Deploy EKS with Terraform 
 
+* [Cluster with only Public subnets](Example-1)
+* [Cluster with Private & Public subnets](Example-2)
+
+<br>
+
+## Use Cases
+
+* [Install HAProxy Ingress Controller](Use-Cases/HAProxy-Ingress-Controller/)
+* [A Sample Application -- Siyuan Note](Use-Cases/sample-app-siyuan/)
+
+
+<br>
+
+
+---
 
 
 | Deploy EKS with Terraform                          | Comments                                                     |
