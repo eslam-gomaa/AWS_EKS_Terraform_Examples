@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: grafana
+  namespace: monitoring
+  annotations:
+    kubernetes.io/ingress.class: "haproxy"
+spec:
+  rules:
+  - host: grafana.elb.devops-caffe.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: prometheus-stack-grafana
+          servicePort: 80

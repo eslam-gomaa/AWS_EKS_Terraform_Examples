@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: alertmanager
+  namespace: monitoring
+  annotations:
+    kubernetes.io/ingress.class: "haproxy"
+spec:
+  rules:
+  - host: alertmanager.elb.devops-caffe.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: prometheus-stack-kube-prom-alertmanager
+          servicePort: 9093

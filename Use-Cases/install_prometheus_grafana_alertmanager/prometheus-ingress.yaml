@@ -1,0 +1,16 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: prometheus
+  namespace: monitoring
+  annotations:
+    kubernetes.io/ingress.class: "haproxy"
+spec:
+  rules:
+  - host: prometheus.elb.devops-caffe.com
+    http:
+      paths:
+      - path: /
+        backend:
+          serviceName: prometheus-stack-kube-prom-prometheus
+          servicePort: 9090

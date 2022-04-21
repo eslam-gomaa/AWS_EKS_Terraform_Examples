@@ -18,26 +18,17 @@ This repo will be organized & populated Over time.
 ## Use Cases
 
 * [Install HAProxy Ingress Controller](Use-Cases/HAProxy-Ingress-Controller/)
-* [A Sample Application -- Siyuan Note](Use-Cases/sample-app-siyuan/)
+* Use your custom DNS name instead of the AWS LB
+    * Create a CNAME record in your DNS Provider to the AWS LB
+    * Register your DNS to AWS Route53
+* [A Sample Application -- Nginx](Use-Cases/sample-app-nginx)
+* [Install Prometheus, Grafana, AlertManager](Use-Cases/install_prometheus_grafana_alertmanager)
+
+**Note:** The default Load Balancer Controller is "`AWS cloud provider load balancer controller`"
+
+* Install `AWS Load Balancer Controller`
+
 
 
 <br>
-
-
----
-
-
-| Deploy EKS with Terraform                          | Comments                                                     |
-| -------------------------------------------------- | ------------------------------------------------------------ |
-| [Cluster with only Public subnets](Example-1)      |  |
-| [Cluster with Private & Public subnets](Example-2) |  |
-|                                                    |                                                              |
-
-
-| Use Cases                                                    | Comments                                                     |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| [Install HAProxy Ingress Controller](Use-Cases/HAProxy-Ingress-Controller/) | Using the default Load Balancer Controller  "`AWS cloud provider load balancer controller`" |
-| [A Sample Application -- Siyuan Note](Use-Cases/sample-app-siyuan/) | Deploy a sample app to the Kubernetes cluster & use the `HAProxy Ingress controller` to access the app Externally. |
-| Install & Use the `AWS Load Balancer Controller `              |                                                              |
-|                                                              |                                                              |
 
