@@ -12,5 +12,5 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: prometheus-stack-grafana
+          serviceName: monitoring-grafana
           servicePort: 80

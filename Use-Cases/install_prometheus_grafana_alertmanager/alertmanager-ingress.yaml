@@ -12,5 +12,5 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: prometheus-stack-kube-prom-alertmanager
+          serviceName: monitoring-kube-prometheus-alertmanager
           servicePort: 9093

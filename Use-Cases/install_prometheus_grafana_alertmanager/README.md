@@ -23,8 +23,8 @@ kubectl get all -n monitoring
 
 Get Grafana default password
 ```bash
-kubectl -n prometheus get secrets kube-prometheus-stack-grafana  -o yaml | grep -i data -C 5
-echo "cHJvbS1vcGVyYXRvcg==" | base64 --decode
+kubectl -n monitoring get secrets monitoring-grafana -o yaml | grep -i data -C 5
+echo "dGVzdDEyMw==" | base64 --decode
 ```
 
 Ingresses

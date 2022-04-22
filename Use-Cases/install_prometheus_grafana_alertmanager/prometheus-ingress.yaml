@@ -12,5 +12,5 @@ spec:
       paths:
       - path: /
         backend:
-          serviceName: prometheus-stack-kube-prom-prometheus
+          serviceName: monitoring-kube-prometheus-prometheus
           servicePort: 9090
