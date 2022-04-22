@@ -2,7 +2,7 @@
 
 <br>
 
-* Change the domain name in the [ingress resource](Use-Cases/sample-app-nginx-1/nginx-ingress.yaml)
+* Change the domain name in the [ingress resource](nginx-ingress.yaml)
 
 
 <br>
