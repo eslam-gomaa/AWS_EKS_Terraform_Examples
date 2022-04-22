@@ -18,7 +18,7 @@ This repo will be organized & populated Over time.
 
 ## Use Cases
 
-> [Install `kubectl` & `helm`](Use-Cases/Pre.md)
+> [Install **`kubectl`** & **`helm`**](Use-Cases/Pre.md)
 
 <br>
 
@@ -26,7 +26,7 @@ This repo will be organized & populated Over time.
 * Use your custom DNS name instead of the AWS LB
     * Create a CNAME record in your DNS Provider to the AWS LB
     * Register your DNS to AWS Route53
-* [A Sample Application -- Nginx](Use-Cases/sample-app-nginx)
+* [A Sample Application -- Nginx](Use-Cases/sample-app-nginx-1)
 * [Install Prometheus, Grafana, AlertManager](Use-Cases/install_prometheus_grafana_alertmanager)
     * Create `service monitor` (Monitor HAProxy)
     * Create a `service monitor` (Monitor Nginx)
