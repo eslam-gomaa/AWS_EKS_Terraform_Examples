@@ -39,6 +39,8 @@ export AWS_REGION='us-east-1'
 
 ##### Run
 ```bash
+cd terraform-eks-2/
+
 terraform init
 terraform plan
 terraform apply

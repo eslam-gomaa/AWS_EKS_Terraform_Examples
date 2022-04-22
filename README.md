@@ -3,7 +3,7 @@ Different strategies to deploy EKS on AWS with Terraform along with different us
 
 <br>
 
-This repo will be organized & populated Over time.  
+**_This repo will be organized & populated Over time._**
 
 
 <br>
@@ -23,8 +23,8 @@ This repo will be organized & populated Over time.
 <br>
 
 * [Install HAProxy Ingress Controller](Use-Cases/HAProxy-Ingress-Controller/)
-* Use your custom DNS name instead of the AWS LB
-    * Create a CNAME record in your DNS Provider to the AWS LB
+* Use your custom DNS name instead of the AWS LB dns name
+    * [Create a CNAME record in your DNS Provider to the AWS LB](Use-Cases/custom_dns_CNAME.md)
     * Register your DNS to AWS Route53
 * [A Sample Application -- Nginx](Use-Cases/sample-app-nginx-1)
 * [Install Prometheus, Grafana, AlertManager](Use-Cases/install_prometheus_grafana_alertmanager)
