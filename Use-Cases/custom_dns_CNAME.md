@@ -2,6 +2,10 @@
 
 Get LB DNS Name
 
+```bash
+kubectl get svc -n haproxy-controller
+```
+
 ![image](https://user-images.githubusercontent.com/33789516/164583579-f32c822c-d6b8-49d4-94e5-ea9b920b0214.png)
 
 <br>
