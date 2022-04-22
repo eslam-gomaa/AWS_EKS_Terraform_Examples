@@ -15,7 +15,12 @@ This repo will be organized & populated Over time.
 
 <br>
 
+
 ## Use Cases
+
+> [Install `kubectl` & `helm`](Use-Cases/Pre.md)
+
+<br>
 
 * [Install HAProxy Ingress Controller](Use-Cases/HAProxy-Ingress-Controller/)
 * Use your custom DNS name instead of the AWS LB
