@@ -58,6 +58,15 @@ variable "eks_cluster_version" {
   default = 1.19
 }
 
+variable "opensearch_cluster_name" {
+  type = string
+  default = "benchmarking-test"
+}
+
+
+
+### Not needed ###
+
 //
 //variable "map_accounts" {
 //  description = "Additional AWS account numbers to add to the aws-auth configmap."
