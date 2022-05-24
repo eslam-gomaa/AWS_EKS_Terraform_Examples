@@ -59,4 +59,30 @@ bash post-script.sh
 
 ---
 
+> Kibana Dashboard
+
+![image](https://user-images.githubusercontent.com/33789516/170109479-14aa1ae8-091b-467e-b795-5ec30e9163db.png)
+
+<br>
+
+> Terraform Output
+
+![image](https://user-images.githubusercontent.com/33789516/170109650-9562c405-5562-463d-a473-27993c1e1394.png)
+
+<br>
+
+> The Test nginx app
+
+Get the Network LB dns name
+
+```
+aws elbv2 describe-load-balancers --region us-east-1 --query 'LoadBalancers[*].DNSName' | jq -r 'to_entries[ ] | .value'
+```
+
+![image](https://user-images.githubusercontent.com/33789516/170110846-f3467821-02c4-4aff-9cb1-b00870985318.png)
+
+<br>
+
+
+The End.
 
