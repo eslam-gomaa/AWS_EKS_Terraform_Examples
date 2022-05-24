@@ -100,8 +100,6 @@ POLICIES
 
 
 
-
-
 ### Error: ValidationException: Apply a restrictive access policy to your domain
 # https://stackoverflow.com/questions/64426133/deployment-of-servless-app-fails-enable-fine-grained-access-control-or-apply-a
 # https://aws.amazon.com/premiumsupport/knowledge-center/anonymous-not-authorized-opensearch/

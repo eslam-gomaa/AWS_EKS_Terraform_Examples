@@ -36,4 +36,3 @@ resource "null_resource" "install_logstash_filebeat" {
   }
 }
 
-# 
