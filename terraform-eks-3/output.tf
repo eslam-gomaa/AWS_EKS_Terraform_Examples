@@ -28,6 +28,15 @@ output "update_kubeconfig_command" {
   value = "aws eks --region ${var.region} update-kubeconfig --name ${var.eks_cluster_name}"
 }
 
+output "NLB_dns_name_command" {
+  value = "aws elbv2 describe-load-balancers --region ${var.region} --query 'LoadBalancers[*].DNSName' | jq -r 'to_entries[ ] | .value'"
+}
+
+output "NLB_dns_status_command" {
+  value = "aws elbv2 describe-load-balancers --region ${var.region} --query 'LoadBalancers[*].State.Code' | jq -r 'to_entries[ ] | .value'"
+}
+
+
 
 ### Not needed ###
 

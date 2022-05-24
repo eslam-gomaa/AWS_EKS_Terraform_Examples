@@ -5,19 +5,19 @@ data "aws_caller_identity" "current" {}
 resource "aws_elasticsearch_domain" "elasticsearch_cluster" {
 count = 1
 domain_name = var.opensearch_cluster_name
-elasticsearch_version = "7.4"
+elasticsearch_version = var.opensearch_version
   cluster_config {
     # Data nodes settings
-    instance_type = "r5.2xlarge.elasticsearch"
-    instance_count = 6
+    instance_type = var.opensearch_data_nodes_instance_type
+    instance_count = var.opensearch_data_nodes_count
     # Master Nodes settings
     dedicated_master_enabled = true
-    dedicated_master_count = 3
-    dedicated_master_type = "r5.2xlarge.elasticsearch"
+    dedicated_master_count = var.opensearch_master_nodes_count
+    dedicated_master_type = var.opensearch_master_nodes_instance_type
     # Warm Nodes settings
     warm_enabled = true
-    warm_count = 2
-    warm_type = "ultrawarm1.medium.elasticsearch" # options: [ultrawarm1.medium.elasticsearch ultrawarm1.large.elasticsearch ultrawarm1.xlarge.elasticsearch]
+    warm_count = var.opensearch_warm_nodes_count
+    warm_type = var.opensearch_warm_nodes_instance_type
 
     zone_awareness_enabled = true
     zone_awareness_config {
@@ -58,8 +58,8 @@ elasticsearch_version = "7.4"
     enabled = true
     internal_user_database_enabled = true
     master_user_options {
-      master_user_name = "admin"
-      master_user_password = "Password_123"
+      master_user_name = var.opensearch_username
+      master_user_password = var.opensearch_password
     }
   }
 

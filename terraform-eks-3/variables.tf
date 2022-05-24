@@ -63,51 +63,48 @@ variable "opensearch_cluster_name" {
   default = "benchmarking-test"
 }
 
+variable "opensearch_version" {
+  type = string
+  default = "7.4"
+}
 
+variable "opensearch_username" {
+  type = string
+  default = "admin"
+}
 
-### Not needed ###
+variable "opensearch_password" {
+  type = string
+  default = "Password_123"
+}
 
-//
-//variable "map_accounts" {
-//  description = "Additional AWS account numbers to add to the aws-auth configmap."
-//  type        = list(string)
-//
-//  default = [
-//    "777777777777",
-//    "888888888888",
-//  ]
-//}
-//
-//variable "map_roles" {
-//  description = "Additional IAM roles to add to the aws-auth configmap."
-//  type = list(object({
-//    rolearn  = string
-//    username = string
-//    groups   = list(string)
-//  }))
-//
-//  default = [
-//    {
-//      rolearn  = "arn:aws:iam::66666666666:role/role1"
-//      username = "role1"
-//      groups   = ["system:masters"]
-//    },
-//  ]
-//}
-//
-//variable "map_users" {
-//  description = "Additional IAM users to add to the aws-auth configmap."
-//  type = list(object({
-//    userarn  = string
-//    username = string
-//    groups   = list(string)
-//  }))
-//
-//  default = [
-//    {
-//      userarn  = "arn:aws:iam::66666666666:user/user1"
-//      username = "user1"
-//      groups   = ["system:masters"]
-//    }
-//  ]
-//}
+variable "opensearch_master_nodes_instance_type" {
+  type = string
+  default = "r5.2xlarge.elasticsearch"
+}
+
+variable "opensearch_master_nodes_count" {
+  type = number
+  default = 3
+}
+
+variable "opensearch_data_nodes_instance_type" {
+  type = string
+  default = "r5.2xlarge.elasticsearch"
+}
+
+variable "opensearch_data_nodes_count" {
+  type = number
+  default = 6
+}
+
+variable "opensearch_warm_nodes_instance_type" {
+  type = string
+  default = "ultrawarm1.medium.elasticsearch"
+  # options: [ultrawarm1.medium.elasticsearch ultrawarm1.large.elasticsearch ultrawarm1.xlarge.elasticsearch]
+}
+
+variable "opensearch_warm_nodes_count" {
+  type = number
+  default = 2
+}

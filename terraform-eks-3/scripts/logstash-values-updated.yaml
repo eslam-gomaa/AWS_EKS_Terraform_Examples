@@ -26,7 +26,7 @@ logstashPipeline:
    }
    output {
     opensearch {
-      hosts       => "https://search-benchmarking-test-sl33wqfloqf53trhegkgh6ua3e.us-east-1.es.amazonaws.com:443"
+      hosts       => "https://search-benchmarking-test-achxwftlogudvc6d2c3tvdxyhu.us-east-1.es.amazonaws.com:443"
       user        => "admin"
       password    => "Password_123"
       index       => "logstash-logs-%{+YYYY.MM.dd}"
