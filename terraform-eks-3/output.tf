@@ -24,6 +24,9 @@ output "opensearch_endpoint" {
   value = element(aws_elasticsearch_domain.elasticsearch_cluster[*].endpoint, 0)
 }
 
+output "update_kubeconfig_command" {
+  value = "aws eks --region ${var.region} update-kubeconfig --name ${var.eks_cluster_name}"
+}
 
 
 ### Not needed ###
@@ -37,4 +40,4 @@ output "opensearch_endpoint" {
 # }
 
 
-# aws eks --region $(terraform output -raw region) update-kubeconfig --name $(terraform output -raw cluster_name)
+# aws eks --region $(terraform output -raw region) update-kubeconfig --name $(terraform output -raw EKS_cluster_name)
