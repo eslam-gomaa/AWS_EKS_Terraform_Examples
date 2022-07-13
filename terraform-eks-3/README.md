@@ -52,6 +52,12 @@ kubectl get nodes
 
 ### Run Post Script (if not run as part of Terraform)
 
+This will do the following:
+1. Update the kubeconfig file
+2. Install HAProxy ingress controller (Will provision an NLB)
+3. Install Nginx (as a test)
+4. Install FileBeat & Logtash (configured to send the ELK cluster logs to the provisioned opensearch cluster)
+
 ```
 bash post-script.sh
 ```

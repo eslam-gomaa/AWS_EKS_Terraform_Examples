@@ -1,3 +1,13 @@
+
+helm repo add haproxytech \
+  https://haproxytech.github.io/helm-charts
+
+# see available repositories
+helm repo list
+
+# refresh your list of charts
+helm repo update
+
 # Install with Helm
 helm upgrade --install haproxy-ingress \
   haproxytech/kubernetes-ingress \

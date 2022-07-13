@@ -2,10 +2,10 @@
 
 // Update the kubeconfig file.
 resource "null_resource" "post_script" {
-  depends_on = [aws_eks_cluster.eks_cluster, aws_elasticsearch_domain.elasticsearch_cluster]
+  depends_on = [aws_elasticsearch_domain.elasticsearch_cluster]
 
    provisioner "local-exec" {
-    command = "bash post-script.sh"
+    command = "/bin/bash post-script.sh"
   }
 }
 

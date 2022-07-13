@@ -51,6 +51,11 @@ echo "${VAR}" > scripts/logstash-values-updated.yaml
 sleep  0.1
 
 
+helm repo add elastic https://helm.elastic.co
+
+helm repo update
+
+
 helm upgrade --install my-logstash elastic/logstash --version 7.17.3 --namespace elk-stack --create-namespace --values scripts/logstash-values-updated.yaml
 
 helm upgrade --install my-filebeat elastic/filebeat --version 7.17.3 --namespace elk-stack --create-namespace --values scripts/filebeat-values.yaml

@@ -9,10 +9,10 @@ variable "bastion_host_ami" {
   default = "ami-0e322da50e0e90e21"
 }
 
-variable "key_pair_name" {
-    type    = string
-    default = "key1"
-}
+# variable "key_pair_name" {
+#     type    = string
+#     default = "key1"
+# }
 
 variable "vpcCidrBlock" {
   type = string
@@ -65,7 +65,7 @@ variable "opensearch_cluster_name" {
 
 variable "opensearch_version" {
   type = string
-  default = "7.4"
+  default = "7.10"
 }
 
 variable "opensearch_username" {
@@ -95,7 +95,7 @@ variable "opensearch_data_nodes_instance_type" {
 
 variable "opensearch_data_nodes_count" {
   type = number
-  default = 6
+  default = 2
 }
 
 variable "opensearch_warm_nodes_instance_type" {
